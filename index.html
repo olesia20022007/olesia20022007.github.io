@@ -1,236 +1,87 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Портфоліо — Борівець Олесі</title>
-  <meta name="description" content="Портфоліо — Ім'я Прізвище. Розробник, UX/UI дизайнер, фрілансер." />
-
-  <!-- Tailwind CDN (для швидкої демо) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --accent: #6D28D9; /* фіолетовий */
-      --muted: #6B7280;
-    }
-    html,body{font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;}
-    /* невелика кастомізація для демонстрації */
-    .glass{backdrop-filter: blur(6px); background-color: rgba(255,255,255,0.6);}    
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Портфоліо — Борівець Олеся</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-gray-50 text-gray-800 leading-relaxed">
-  <!-- Header -->
-  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-gray-200">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <a href="#" class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-md flex items-center justify-center bg-gradient-to-br from-purple-600 to-indigo-600 text-white font-semibold"></div>
-          <span class="font-semibold text-lg">Борівець Олеся</span>
-        </a>
+<body>
 
-        <!-- Desktop nav -->
-        <nav class="hidden md:flex items-center gap-6">
-          <a href="#about" class="hover:text-indigo-600">Про мене</a>
-          <a href="#skills" class="hover:text-indigo-600">Навички</a>
-          <a href="#projects" class="hover:text-indigo-600">Проєкти</a>
-          <a href="#contact" class="hover:text-indigo-600">Контакти</a>
-          <a href="#" class="ml-2 inline-block px-4 py-2 rounded-md bg-gradient-to-br from-indigo-600 to-purple-600 text-white text-sm">Завантажити CV</a>
-        </nav>
-
-        <!-- Mobile menu button -->
-        <div class="md:hidden">
-          <button id="burger" aria-label="Відкрити меню" class="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-300">
-            <svg id="burger-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-            <svg id="burger-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Mobile nav panel -->
-    <div id="mobilePanel" class="md:hidden hidden border-t border-gray-100">
-      <div class="px-4 py-4 flex flex-col gap-3">
-        <a href="#about" class="py-2">Про мене</a>
-        <a href="#skills" class="py-2">Навички</a>
-        <a href="#projects" class="py-2">Проєкти</a>
-        <a href="#contact" class="py-2">Контакти</a>
-        <a href="#" class="py-2 inline-block px-4 py-2 rounded-md bg-indigo-600 text-white text-center">Завантажити CV</a>
-      </div>
-    </div>
+  <!-- Хедер -->
+  <header>
+    <div class="logo">Олеся Борівець</div>
+    <nav id="nav">
+      <a href="#about">Про мене</a>
+      <a href="#skills">Навички</a>
+      <a href="#projects">Проєкти</a>
+      <a href="#contact">Контакти</a>
+    </nav>
+    <button id="burger">&#9776;</button>
   </header>
 
-  <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <!-- Hero / About -->
-    <section id="about" class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-      <div class="md:col-span-1 flex justify-center md:justify-start">
-        <img src="images\image-for-portfolio.jpeg" alt="Фото" class="w-48 h-48 rounded-lg object-cover shadow-lg" />
+  <!-- Про мене -->
+  <section id="about">
+    <h2>Про мене</h2>
+    <img src="images/image-for-portfolio.jpeg" alt="Фото Олесі" class="about-photo" />
+    <p>Я — студентка, вивчаю фронтенд-розробку та UX/UI дизайн. Шукаю позицію Junior / Middle Frontend Developer або фріланс-проєкти. Працюю з HTML, CSS, JS, Figma.</p>
+  </section>
+
+  <!-- Навички -->
+  <section id="skills">
+    <h2>Навички</h2>
+    <ul class="skills-list">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript</li>
+      <li>Git/GitHub</li>
+      <li>Figma</li>
+    </ul>
+  </section>
+
+  <!-- Проєкти -->
+  <section id="projects">
+    <h2>Проєкти</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="images/pr_1.png" alt="Скріншот проєкту A" />
+        <h3>Проєкт A</h3>
+        <p>Верстка лендингу з HTML, CSS, JavaScript.</p>
+        <a href="pr_1/index.html">Демо</a> | <a href="#">GitHub</a>
       </div>
-      <div class="md:col-span-2">
-        <h1 class="text-3xl sm:text-4xl font-extrabold">Привіт, я Олеся Борівець 👋</h1>
-        <p class="mt-4 text-gray-600 max-w-prose">Я — студентка. Навчаюсь фронтенд-розробці та дизайну. Працюю над створенням адаптивних інтерфейсів та користувацьких продуктів. Шукаю позицію <strong>Junior / Middle Frontend Developer</strong> або фріланс-проєкти. Маю досвід у HTML, CSS, JavaScript та Figma.</p>
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a href="#projects" class="px-4 py-2 rounded-md border border-indigo-600 text-indigo-600">Переглянути проєкти</a>
-          <a href="#contact" class="px-4 py-2 rounded-md bg-indigo-600 text-white">Зв'язатись зі мною</a>
-        </div>
+      <div class="project-card">
+        <img src="https://via.placeholder.com/300x200" alt="Скріншот проєкту B" />
+        <h3>Проєкт B</h3>
+        <p>React SPA з API-підключенням.</p>
+        <a href="#">Демо</a> | <a href="#">GitHub</a>
       </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="mt-16">
-      <h2 class="text-2xl font-semibold">Навички</h2>
-      <p class="text-sm text-gray-500 mt-1">Ключові технології та інструменти, з якими я працюю</p>
-
-      <ul class="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
-        <li class="flex flex-col items-center p-4 bg-white rounded-lg shadow-sm">
-          <svg class="w-8 h-8 mb-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h16v16H4z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span class="text-sm">HTML5</span>
-        </li>
-        <li class="flex flex-col items-center p-4 bg-white rounded-lg shadow-sm">
-          <svg class="w-8 h-8 mb-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h16v16H4z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span class="text-sm">CSS3 / Tailwind</span>
-        </li>
-        <li class="flex flex-col items-center p-4 bg-white rounded-lg shadow-sm">
-          <svg class="w-8 h-8 mb-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h16v16H4z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span class="text-sm">JavaScript</span>
-        </li>
-        <li class="flex flex-col items-center p-4 bg-white rounded-lg shadow-sm">
-          <svg class="w-8 h-8 mb-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h16v16H4z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span class="text-sm">Git / GitHub</span>
-        </li>
-        <li class="flex flex-col items-center p-4 bg-white rounded-lg shadow-sm">
-          <svg class="w-8 h-8 mb-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h16v16H4z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span class="text-sm">Figma</span>
-        </li>
-      </ul>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="mt-16">
-      <div class="flex items-center justify-between">
-        <h2 class="text-2xl font-semibold">Проєкти</h2>
-        <p class="text-sm text-gray-500">Натисніть на картку щоб відкрити демо або репозиторій</p>
+      <div class="project-card">
+        <img src="https://via.placeholder.com/300x200" alt="Скріншот проєкту C" />
+        <h3>Проєкт C</h3>
+        <p>Адаптивна сторінка з SEO оптимізацією.</p>
+        <a href="#">Демо</a> | <a href="#">GitHub</a>
       </div>
-
-      <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Card 1 -->
-        <article class="bg-white rounded-lg shadow hover:shadow-lg transition p-4 flex flex-col">
-          <img src="images/pr_1.png" alt="скріншот проєкту" class="rounded-md object-cover w-full h-40" />
-          <h3 class="mt-3 font-semibold">Проєкт A</h3>
-          <p class="text-sm text-gray-600 mt-2 flex-1">Короткий опис проєкту, роль, основні технології та досягнення.</p>
-          <div class="mt-4 flex items-center justify-between gap-2">
-            <div class="text-xs text-gray-500">HTML • CSS • JS</div>
-            <div class="flex gap-2">
-              <a href="pr_1/index.html" class="text-sm px-3 py-1 rounded-md border border-indigo-600 text-indigo-600">Демо</a>
-              <a href="#" class="text-sm px-3 py-1 rounded-md bg-indigo-600 text-white">Repo</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 2 -->
-        <article class="bg-white rounded-lg shadow hover:shadow-lg transition p-4 flex flex-col">
-          <img src="https://via.placeholder.com/600x350" alt="скріншот проєкту" class="rounded-md object-cover w-full h-40" />
-          <h3 class="mt-3 font-semibold">Проєкт B</h3>
-          <p class="text-sm text-gray-600 mt-2 flex-1">Короткий опис — SPA на React з адаптивною версткою.</p>
-          <div class="mt-4 flex items-center justify-between gap-2">
-            <div class="text-xs text-gray-500">React • API</div>
-            <div class="flex gap-2">
-              <a href="#" class="text-sm px-3 py-1 rounded-md border border-indigo-600 text-indigo-600">Демо</a>
-              <a href="#" class="text-sm px-3 py-1 rounded-md bg-indigo-600 text-white">Repo</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 3 -->
-        <article class="bg-white rounded-lg shadow hover:shadow-lg transition p-4 flex flex-col">
-          <img src="https://via.placeholder.com/600x350" alt="скріншот проєкту" class="rounded-md object-cover w-full h-40" />
-          <h3 class="mt-3 font-semibold">Проєкт C</h3>
-          <p class="text-sm text-gray-600 mt-2 flex-1">Landing page, оптимізований під швидкість і SEO.</p>
-          <div class="mt-4 flex items-center justify-between gap-2">
-            <div class="text-xs text-gray-500">HTML • CSS • SEO</div>
-            <div class="flex gap-2">
-              <a href="#" class="text-sm px-3 py-1 rounded-md border border-indigo-600 text-indigo-600">Демо</a>
-              <a href="#" class="text-sm px-3 py-1 rounded-md bg-indigo-600 text-white">Repo</a>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="mt-16">
-      <h2 class="text-2xl font-semibold">Контакти</h2>
-      <p class="text-sm text-gray-500 mt-1">Зв'яжіться зі мною через email або соціальні мережі</p>
-
-      <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="md:col-span-1 bg-white p-6 rounded-lg shadow">
-          <h3 class="font-semibold">Контактні дані</h3>
-          <ul class="mt-3 text-sm text-gray-600 space-y-2">
-            <li><strong>Email:</strong> <a href="olesia.borivets-ki2201@kep.nung.edu.ua" class="text-indigo-600">olesia.borivets-ki2201@kep.nung.edu.ua</a></li>
-            <li><strong>GitHub:</strong> <a href="#" class="text-indigo-600">github.com/yourname</a></li>
-          </ul>
-        </div>
-
-        <div class="md:col-span-2 bg-white p-6 rounded-lg shadow">
-          <h3 class="font-semibold">Форма зв'язку</h3>
-          <form class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4" onsubmit="event.preventDefault(); alert('Повідомлення надіслано (демо).'); this.reset();">
-            <input required class="p-3 border rounded-md" placeholder="Ім'я" />
-            <input required class="p-3 border rounded-md" placeholder="Email" type="email" />
-            <input class="p-3 border rounded-md sm:col-span-2" placeholder="Тема" />
-            <textarea required class="p-3 border rounded-md sm:col-span-2" rows="5" placeholder="Повідомлення..."></textarea>
-            <div class="sm:col-span-2 flex items-center justify-between">
-              <div class="text-sm text-gray-500">Або надішліть листа на <a href="olesia.borivets-ki2201@kep.nung.edu.ua" class="text-indigo-600">olesia.borivets-ki2201@kep.nung.edu.ua</a></div>
-              <div class="flex gap-2">
-                <button type="reset" class="px-4 py-2 rounded-md border">Очистити</button>
-                <button type="submit" class="px-4 py-2 rounded-md bg-indigo-600 text-white">Надіслати</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="border-t bg-white/80 backdrop-blur py-6 mt-16">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
-      <div class="text-sm text-gray-600">© <span id="yr"></span> Олеся Борівець. Всі права захищені.</div>
-      <div class="text-sm text-gray-600">Зроблено з ❤️ • <a href="#" class="text-indigo-600">Політика конфіденційності</a></div>
     </div>
+  </section>
+
+  <!-- Контакти -->
+  <section id="contact">
+    <h2>Контакти</h2>
+    <p>Email: <a href="mailto:olesia.borivets-ki2201@kep.nung.edu.ua">olesia.borivets-ki2201@kep.nung.edu.ua</a></p>
+    <p>GitHub: <a href="#">github.com/yourname</a></p>
+    <form>
+      <input type="text" placeholder="Ваше ім’я" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Повідомлення" required></textarea>
+      <button type="submit">Надіслати</button>
+    </form>
+  </section>
+
+  <!-- Футер -->
+  <footer>
+    <p>© <span id="year"></span> Олеся Борівець. Всі права захищені.</p>
   </footer>
 
-  <script>
-    // simple burger menu
-    const burger = document.getElementById('burger');
-    const mobilePanel = document.getElementById('mobilePanel');
-    const burgerOpen = document.getElementById('burger-open');
-    const burgerClose = document.getElementById('burger-close');
-    burger.addEventListener('click', ()=>{
-      const open = mobilePanel.classList.toggle('hidden');
-      // toggle icons
-      burgerOpen.classList.toggle('hidden');
-      burgerClose.classList.toggle('hidden');
-    });
-
-    // set year
-    document.getElementById('yr').textContent = new Date().getFullYear();
-
-    // smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', function(e){
-        const href = this.getAttribute('href');
-        if(href.startsWith('#')){
-          const el = document.querySelector(href);
-          if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); mobilePanel.classList.add('hidden'); burgerOpen.classList.remove('hidden'); burgerClose.classList.add('hidden'); }
-        }
-      });
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
