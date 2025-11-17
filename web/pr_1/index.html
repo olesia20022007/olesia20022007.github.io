@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Форма — Варіант</title>
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+<body>
+  <div class="page-bg">
+    <div class="form-wrapper">
+      <form class="card" novalidate>
+        <h1 class="title">Login</h1>
+
+        <div class="field">
+          <label for="username">Username</label>
+          <input id="username" type="text" placeholder="Enter username" />
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" type="password" placeholder="Enter password" />
+          <p class="assistive">Your password is between 4 and 12 characters</p>
+        </div>
+
+        <!-- Input Text Label з правильною структурою -->
+        <div class="field">
+          <label for="text1">Input Text Label</label>
+          <div class="input-error">
+            <input id="text1" type="text" placeholder="Type here" aria-describedby="err1" />
+            <span class="error-icon" aria-hidden="true">!</span>
+          </div>
+          <p id="err1" class="error-text">Type here</p>
+        </div>
+        
+        <div class="row small-gap">
+          <label class="checkbox">
+            <input type="checkbox" id="remember" />
+            <span class="checkbox-custom" aria-hidden="true"></span>
+            Remember me
+          </label>
+        </div>
+
+        <div class="row small-gap">
+          <div class="toggle-block">
+            <div class="toggle-labels">
+              <span class="on-label">Off</span>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="toggle" />
+              <span class="slider"></span>
+            </label>
+            <span class="off-label">On</span>
+          </div>
+        </div>
+
+        <fieldset class="radio-group" aria-label="Radio group">
+          <legend class="sr-only">Radio selection</legend>
+          <label class="radio">
+            <input type="radio" name="r" value="1" />
+            <span class="radio-custom"></span>
+            Radio selection 1
+          </label>
+          <label class="radio">
+            <input type="radio" name="r" value="2" checked />
+            <span class="radio-custom"></span>
+            Radio selection 2
+          </label>
+          <label class="radio">
+            <input type="radio" name="r" value="3" />
+            <span class="radio-custom"></span>
+            Radio selection 3
+          </label>
+        </fieldset>
+
+        <div class="field">
+          <label>Dropdown Title</label>
+          <div class="custom-select" data-selected="Dropdown option">
+            <button type="button" class="select-btn" aria-haspopup="listbox" aria-expanded="false">
+              <span class="selected-text">Dropdown option</span>
+              <span class="caret">▾</span>
+            </button>
+            <ul class="select-options" role="listbox">
+              <li role="option" tabindex="0">Dropdown option</li>
+              <li role="option" tabindex="0">Dropdown option 1</li>
+              <li role="option" tabindex="0">Dropdown option 2</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button type="button" class="btn btn-ghost">Cancel</button>
+          <button type="submit" class="btn btn-primary">Next</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="script/script.js"></script>
+</body>
+</html>

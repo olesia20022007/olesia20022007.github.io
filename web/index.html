@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Портфоліо — Борівець Олеся</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Хедер -->
+  <header>
+    <div class="logo">Олеся Борівець</div>
+    <nav id="nav">
+      <a href="#about">Про мене</a>
+      <a href="#skills">Навички</a>
+      <a href="#projects">Проєкти</a>
+      <a href="#contact">Контакти</a>
+    </nav>
+    <button id="burger">&#9776;</button>
+  </header>
+
+  <!-- Про мене -->
+  <section id="about">
+    <h2>Про мене</h2>
+    <img src="images/image-for-portfolio.jpeg" alt="Фото Олесі" class="about-photo" />
+    <p>Я — студентка, вивчаю фронтенд-розробку та UX/UI дизайн. Шукаю позицію Junior / Middle Frontend Developer або фріланс-проєкти. Працюю з HTML, CSS, JS, Figma.</p>
+  </section>
+
+  <!-- Навички -->
+  <section id="skills">
+    <h2>Навички</h2>
+    <ul class="skills-list">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript</li>
+      <li>Git/GitHub</li>
+      <li>Figma</li>
+    </ul>
+  </section>
+
+  <!-- Проєкти -->
+  <section id="projects">
+    <h2>Проєкти</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="images/pr_1.png" alt="Скріншот проєкту A" />
+        <h3>Проєкт A</h3>
+        <p>Верстка лендингу з HTML, CSS, JavaScript.</p>
+        <a href="pr_1/index.html">Демо</a> | <a href="olesia20022007.github.io/pr_1/index.html">GitHub</a> <!-- ???? -->
+      </div>
+      <div class="project-card">
+        <img src="images/pr3.png" alt="Скріншот проєкту B" />
+        <h3>Проєкт B</h3>
+        <p>Створення динамічного списку покупок.</p>
+        <a href="pr3/index.html">Демо</a> | <a href="olesia20022007.github.io/pr3/index.html">GitHub</a>
+      </div>
+      <div class="project-card">
+        <img src="images/pr4.png" alt="Скріншот проєкту C" />
+        <h3>Проєкт C</h3>
+        <p>Реалізація простого ToDo List</p>
+        <a href="pr4/index.html">Демо</a> | <a href="olesia20022007.github.io/pr4/index.html">GitHub</a>
+      </div>
+      <div class="project-card">
+        <img src="images/pr5.png" alt="Скріншот проєкту D" />
+        <h3>Проєкт D</h3>
+        <p>Робота з API-інтерфейсом Geolocation.</p>
+        <a href="pr5/myLoc.html">Демо</a> | <a href="olesia20022007.github.io/pr5/myLoc.html">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Контакти -->
+  <section id="contact">
+    <h2>Контакти</h2>
+    <p>Email: <a href="mailto:olesia.borivets-ki2201@kep.nung.edu.ua">olesia.borivets-ki2201@kep.nung.edu.ua</a></p>
+    <p>GitHub: <a href="#">github.com/olesia20022007</a></p>
+    <form>
+      <input type="text" placeholder="Ваше ім’я" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Повідомлення" required></textarea>
+      <button type="submit">Надіслати</button>
+    </form>
+  </section>
+
+  <!-- Футер -->
+  <footer>
+    <p>© <span id="year"></span> Олеся Борівець. Всі права захищені.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
