@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Корзина</h1>
+
+<div id="cart-items"></div>
+
+<br>
+<a href="index.html">Повернутись до покупок</a>
+<button onclick="alert('Оплата успішна!')">Оплатити</button>
+
+<script>
+    const items = JSON.parse(localStorage.getItem("cart") || "[]");
+
+    const container = document.getElementById("cart-items");
+
+    if (items.length === 0) {
+        container.innerHTML = "<p>Корзина пуста</p>";
+    } else {
+        container.innerHTML = items.map(item => `
+            <div class="cart-row">
+                <p><b>${item.name}</b></p>
+                <p>Кількість: ${item.qty}</p>
+                <p>Ціна: ${item.price * item.qty} грн</p>
+            </div>
+        `).join("");
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Годинники</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Годинники</h1>
+    <div id="cart-icon">
+        🛒 <span id="cart-count">0</span>
+    </div>
+</header>
+
+<div id="products">
+    <div class="product">
+        <img src="https://via.placeholder.com/150" alt="watch">
+        <h3>Класичний годинник</h3>
+        <p>Ціна: 1500 грн</p>
+        <button class="add-btn" data-name="Класичний годинник" data-price="1500">Додати у корзину</button>
+    </div>
+
+    <div class="product">
+        <img src="https://via.placeholder.com/150" alt="watch">
+        <h3>Спортивний годинник</h3>
+        <p>Ціна: 2200 грн</p>
+        <button class="add-btn" data-name="Спортивний годинник" data-price="2200">Додати у корзину</button>
+    </div>
+</div>
+
+<!-- Модальне вікно -->
+<div id="modal" class="hidden">
+    <div id="modal_сontent"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
